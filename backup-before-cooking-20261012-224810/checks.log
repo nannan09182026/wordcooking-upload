@@ -1,0 +1,90 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.91 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+
+PASS: four independent sidebar pages
+PASS: cannot open without preparation
+PASS: kitchen independent from dining
+PASS: kitchen contains only tools, no free ingredients
+PASS: UI preparation debits warehouse
+PASS: small movement remains click
+PASS: second click closes card detail
+PASS: juice via actual mouse drop
+PASS: processing finds nearby free position
+PASS: ingredients stack
+PASS: group accepts further ingredients
+PASS: fry tags include ingredient, quantity, processing and method
+PASS: new recipe recorded but not automatically listed
+PASS: same recipe not duplicated
+PASS: tools constrained to left zone
+PASS: boil distinct ingredients
+PASS: stir fry distinct ingredients
+PASS: open after preparation creates customer
+PASS: manual receptionist required initially
+PASS: customer requests ingredient, not recipe
+PASS: carry transfers dish exactly once
+PASS: dish can return to kitchen without duplication
+PASS: mouse serve consumes dish and completes order
+PASS: majority preferences produce extra tips
+PASS: preferences learned through feedback
+PASS: cannot settle with outstanding guest
+PASS: click accepted customer inspects without cancellation
+PASS: cancel order is available without payment
+PASS: daily settlement displayed
+PASS: settlement cannot be paid twice
+PASS: next morning resets daily totals
+PASS: farm initially empty
+PASS: drag seed plants and consumes stock
+PASS: occupied land rejects planting
+PASS: crop progress advances
+PASS: mature plot changes label
+PASS: harvest scatters three crops and clears land
+PASS: closed collection box does not collect
+PASS: crop reaches collector and enters warehouse
+PASS: day two permits land upgrade
+PASS: large plot yields seven scattered crops
+PASS: farm harvest usable in kitchen
+PASS: return ingredient restores exactly one unit
+PASS: barn initially empty
+PASS: click coop enters pen with local actions
+PASS: feed drag consumes one stock and places food
+PASS: animal hops and approaches food
+PASS: chick eats first food and grows
+PASS: second meal matures chick
+PASS: mature chicken produces egg while another page visible
+PASS: egg dragged into collector reaches warehouse
+PASS: chicken needs another meal before next egg
+PASS: coop upgrade works
+PASS: insufficient funds never creates asset
+PASS: 兔 grows from actual feeding
+PASS: 兔 dispatch consumes animal once
+PASS: 兔 products collected
+PASS: 猪 grows from actual feeding
+PASS: 猪 dispatch consumes animal once
+PASS: 猪 products collected
+PASS: kitchen equipment upgrade expands capacity
+PASS: equipment upgrade cannot charge twice
+PASS: 20 percent markup lowers daily demand to three
+PASS: accepted quote unaffected by later price change
+PASS: day three permits three employee roles
+PASS: discount increases demand
+PASS: reception employee accepts order
+PASS: chef and runner consume prepared ingredients and serve
+PASS: daily wages included in settlement
+PASS: repeated organize cannot generate ingredients
+PASS: shop UI debits coins and adds stock
+PASS: recipe price button changes markup by ten
+PASS: recipe unlisting button works
+PASS: unaccepted order rejects serving without consuming dish
+PASS: wrong ingredient rejected without consuming dish
+PASS: single ingredient cannot be cooked as a group
+PASS: empty-space drop preserves ingredient
+PASS: page change cancels in-progress drag
+PASS: farm respects plot capacity
+PASS: invalid seed drop never consumes stock
+PASS: upgraded coop enforces six-animal capacity
+PASS: all consumed food removed from world
+PASS: incomplete recipe leaves all prepared stock intact
+PASS: group accepts up to six ingredients
+PASS: seventh ingredient remains separate without loss
+PASS: processing rejects group without mutating ingredients
+GAME CHECKS: 86 checks, 0 failures

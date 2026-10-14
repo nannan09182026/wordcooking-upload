@@ -1,0 +1,52 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.91 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+
+PASS: test mode starts with isolated empty catalog
+PASS: nineteen sound streams loaded
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: sound stream duration valid
+PASS: first dish recorded and discovery starts
+PASS: discovery never blocks input
+PASS: repeat recipe does not repeat discovery
+PASS: variant grouped under same named dish
+PASS: free combination goes to my creations
+PASS: successive discoveries queued
+PASS: atomic catalog save succeeds
+PASS: load restores variants and known progress
+PASS: settings reload
+PASS: catalog restores recipe book without automatic listing
+PASS: loading never replays discoveries
+PASS: mute stops active players and new playback
+PASS: same sound has playback cooldown
+PASS: voice limit enforced
+PASS: corrupt primary catalog recovers from backup
+PASS: malformed record rejected
+PASS: catalog menu opens
+PASS: undiscovered dishes hide names and recipes
+PASS: my creations filter isolates one unique creation
+PASS: detail displays both preparation variants
+PASS: valid tool highlights during drag
+PASS: animated drag processes ingredient and clears highlight
+PASS: drop animation restores scale
+PASS: three visible tray slots initially
+PASS: tray upgrade shows six slots
+PASS: routine feedback is a nonblocking toast
+PASS: toast cannot intercept drag
+POLISH CHECKS: 48 checks, 0 failures

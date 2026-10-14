@@ -1,0 +1,41 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.91 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+
+PASS: opening menu fades in white veil
+PASS: pantry initially shows six vegetables
+PASS: click takes one food
+PASS: click take reveals placed food
+PASS: drag takes one food onto workspace
+PASS: drag uses pointer drop position
+PASS: drag restores window and veil
+PASS: outside table drop consumes nothing
+PASS: drop back into window consumes nothing
+PASS: drag to trash does not take food out of pantry
+PASS: drag fades menu and removes veil for placement
+PASS: escape cancels ingredient drag without stock change
+PASS: drag from pantry onto tool processes ingredient
+PASS: full workbench refuses drag without consuming stock
+PASS: category changes food list
+PASS: empty stock cannot spawn
+PASS: outside click closes modal and veil
+PASS: veil closing click cannot open underlying ingredient box
+PASS: shop contains all fourteen foods
+PASS: quantity purchase charges correct amount once
+PASS: purchase adds exact stock and preserves quantity
+PASS: purchase feedback does not show blocking text
+PASS: shop category filters goods
+PASS: unaffordable actions disabled
+PASS: insufficient balance cannot purchase
+PASS: small shop uses one column
+PASS: resizing shop reflows columns
+PASS: outlet click opens anchored help
+PASS: second outlet click closes help
+PASS: different click position keeps help fixed
+PASS: blank click dismisses outlet help
+PASS: catalog medium window uses three columns
+PASS: catalog distinguishes discovered and unknown cards
+PASS: recipe card opens preparation detail
+PASS: large catalog uses four columns
+PASS: small catalog uses one column
+PASS: escape dismisses window and veil
+UI CARD CHECKS: 37 checks, 0 failures

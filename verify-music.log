@@ -1,0 +1,21 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.91 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+
+PASS: original stereo track loaded at full duration
+PASS: test mode does not auto start music
+PASS: entry gradually fades in
+PASS: entry reaches intended quiet background level
+PASS: end overlaps next beginning
+PASS: crossfade does not double combined gain
+PASS: loop finishes handover and stops old voice
+PASS: mute fades out without resetting playhead
+PASS: unmute fades back to selected volume
+PASS: music preference saved and restored independently
+PASS: start screen still opens shop
+PASS: page and save entry keep continuous music
+PASS: sound effect settings do not change background music
+PASS: music controls coexist with existing settings window
+PASS: return to title keeps same music player
+PASS: exit fades instead of cutting abruptly
+PASS: exit fade ends with both players stopped
+MUSIC CHECKS: 17 checks, 0 failures

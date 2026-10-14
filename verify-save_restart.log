@@ -1,0 +1,9 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.91 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+
+PASS: fresh process reads slot summary from disk
+PASS: restart preserves day and wages
+PASS: restart restores animals and fields
+PASS: restart restores recipe catalog and tray
+PASS: restart does not replay animal or discovery effects
+RESTART CHECKS: 5 checks, 0 failures

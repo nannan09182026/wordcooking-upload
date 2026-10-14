@@ -1,0 +1,20 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.91 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+
+PASS: initial five tools and three ingredients
+PASS: small movement is click
+PASS: second click closes explanation
+PASS: mouse drag applies juice
+PASS: processed ingredient placed beside tool
+PASS: mouse drop merges ingredients
+PASS: group accepts another ingredient
+PASS: mouse drop cooks a group
+PASS: dish has exact expected tags
+PASS: tool stays within left area
+PASS: farm placeholder
+PASS: barn placeholder
+PASS: return preserves workbench
+PASS: boil without duplicate or juice
+PASS: stir fry tag
+PASS: reset restores clean table
+WORKBENCH CHECKS: 0 failures

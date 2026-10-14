@@ -1,0 +1,261 @@
+extends Control
+# 界面和规则集中在这里。先保持直观，不拆分复杂系统。
+
+const Card = preload("res://card.gd")
+const WORK_AREA = Rect2(132, 116, 436, 470)
+const TABLE_AREA = Rect2(132, 116, 1128, 470)
+const INGREDIENT_NAMES = ["番茄", "鸡蛋", "土豆"]
+const MAX_CARDS = 20
+const MAX_GROUP = 6
+
+var restaurant: Control
+var card_layer: Control
+var placeholder: Label
+var status_label: Label
+var info_label: Label
+var selected_card = null
+var nav_buttons = []
+var cards = []
+
+func _ready():
+	build_interface()
+	reset_table()
+
+func make_label(parent, text_value, rect, font_size = 18):
+	var label = Label.new()
+	label.text = text_value
+	label.position = rect.position
+	label.size = rect.size
+	label.add_theme_font_size_override("font_size", font_size)
+	label.add_theme_color_override("font_color", Color("354139"))
+	label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	parent.add_child(label)
+	return label
+
+func make_button(parent, text_value, rect):
+	var button = Button.new()
+	button.text = text_value
+	button.position = rect.position
+	button.size = rect.size
+	button.add_theme_font_size_override("font_size", 18)
+	parent.add_child(button)
+	return button
+
+func make_panel(parent, node_name, rect, color):
+	var panel = ColorRect.new()
+	panel.name = node_name
+	panel.position = rect.position
+	panel.size = rect.size
+	panel.color = Color(color)
+	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	parent.add_child(panel)
+
+func build_interface():
+	make_panel(self, "Background", Rect2(0, 0, 1280, 720), "f1eee5")
+	make_panel(self, "Sidebar", Rect2(0, 0, 112, 720), "dce3da")
+	make_label(self, "文字料理", Rect2(12, 24, 100, 40), 21)
+	for i in range(3):
+		var page = ["餐厅", "农场", "畜棚"][i]
+		var button = make_button(self, page, Rect2(12, 106 + i * 66, 88, 48))
+		button.name = page
+		button.pressed.connect(show_page.bind(page))
+		nav_buttons.append(button)
+	restaurant = Control.new()
+	restaurant.name = "Restaurant"
+	restaurant.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(restaurant)
+	make_label(restaurant, "料理工作台", Rect2(136, 18, 420, 42), 28)
+	make_label(restaurant, "拖动食材 → 处理 → 叠放成组 → 烹饪", Rect2(136, 65, 720, 32))
+	make_panel(restaurant, "WorkArea", WORK_AREA, "e1e6dd")
+	make_panel(restaurant, "IngredientArea", Rect2(580, 116, 680, 470), "eae7de")
+	make_label(restaurant, "处理 / 烹饪区 · 40%", Rect2(148, 122, 400, 32))
+	make_label(restaurant, "食材 / 成品区 · 60%", Rect2(596, 122, 640, 32))
+	make_label(restaurant, "处理工具", Rect2(152, 173, 200, 26), 16)
+	make_label(restaurant, "烹饪工具", Rect2(152, 363, 200, 26), 16)
+	for i in range(INGREDIENT_NAMES.size()):
+		var ingredient_name = INGREDIENT_NAMES[i]
+		var button = make_button(restaurant, "+ " + ingredient_name, Rect2(620 + i * 142, 65, 132, 34))
+		button.pressed.connect(add_ingredient.bind(ingredient_name))
+	var reset_button = make_button(restaurant, "重置工作台", Rect2(1090, 22, 164, 42))
+	reset_button.pressed.connect(reset_table)
+	card_layer = Control.new()
+	card_layer.name = "Cards"
+	card_layer.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	restaurant.add_child(card_layer)
+	status_label = make_label(restaurant, "", Rect2(136, 594, 1116, 34), 17)
+	info_label = make_label(restaurant, "", Rect2(136, 635, 1116, 72), 17)
+	info_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	placeholder = make_label(self, "", Rect2(180, 240, 1030, 200), 28)
+	placeholder.name = "Placeholder"
+	show_page("餐厅")
+
+func show_page(page):
+	restaurant.visible = page == "餐厅"
+	placeholder.visible = page != "餐厅"
+	placeholder.text = page + "\n暂未开放 · 本次先试做一道料理\n点击「餐厅」返回，工作台会保留。"
+	for button in nav_buttons:
+		button.disabled = button.text == page
+
+func reset_table():
+	for card in cards:
+		card.queue_free()
+	cards.clear()
+	selected_card = null
+	info_label.text = "单击卡片查看说明，再次单击关闭。按住移动超过 8 像素才会拖动。"
+	for i in range(5):
+		var tool = create_card("tool", [])
+		tool.tool_name = ["切", "榨", "煮", "炸", "炒"][i]
+		tool.drag_area = WORK_AREA
+		if i < 2:
+			tool.position = Vector2(160 + i * 186, 215)
+		else:
+			tool.position = Vector2(152 + (i - 2) * 138, 414)
+		tool.refresh()
+	for ingredient_name in INGREDIENT_NAMES:
+		add_ingredient(ingredient_name)
+	status_label.text = "先试试：补充番茄 → 榨一份番茄 → 与另一份番茄叠放 → 拖到炸。"
+
+func create_card(kind, items):
+	var card = Card.new()
+	card.name = "Card"
+	card.kind = kind
+	card.items = items.duplicate(true)
+	card.drag_area = TABLE_AREA
+	card.clicked.connect(on_card_clicked)
+	card.dropped.connect(on_card_dropped)
+	card_layer.add_child(card)
+	cards.append(card)
+	return card
+
+func add_ingredient(ingredient_name):
+	if cards.size() >= MAX_CARDS:
+		status_label.text = "桌面最多 20 张卡片（含工具），请先组合、烹饪或重置。"
+		return
+	var card = create_card("ingredient", [{"name": ingredient_name, "process": ""}])
+	place_near(card, Vector2(626, 192))
+	status_label.text = "已补充 " + ingredient_name + "。这是测试用的免费补充。"
+
+func remove_card(card):
+	if selected_card == card:
+		selected_card = null
+		info_label.text = ""
+	cards.erase(card)
+	card.hide()
+	card.queue_free()
+
+func on_card_dropped(card):
+	if card.kind != "ingredient":
+		return
+	# 使用卡片中心判断目标；从最上层卡片开始找，避免同时触发两个目标。
+	var center = card.position + card.size / 2
+	var layers = card_layer.get_children()
+	layers.reverse()
+	for target in layers:
+		if target == card or not cards.has(target):
+			continue
+		if not Rect2(target.position, target.size).has_point(center):
+			continue
+		if target.kind == "tool":
+			use_tool(card, target)
+			return
+		if target.kind == "ingredient":
+			if target.items.size() + card.items.size() > MAX_GROUP:
+				status_label.text = "原型每组最多 6 份食材，方便阅读和试验。"
+				place_near(card, card.start_position)
+				return
+			target.items.append_array(card.items.duplicate(true))
+			remove_card(card)
+			target.refresh()
+			place_near(target, target.position)
+			status_label.text = "已组合，共 " + str(target.items.size()) + " 份食材。拖到煮 / 炸 / 炒制作料理。"
+			update_info()
+			return
+
+func use_tool(card, tool):
+	if tool.tool_name in ["切", "榨"]:
+		if card.items.size() > 1:
+			status_label.text = "请先处理单份食材，再叠放成组。"
+		else:
+			# 本原型只保留最近一次处理：榨之后再切，会变成 [切]。
+			card.items[0]["process"] = tool.tool_name
+			card.refresh()
+			status_label.text = "已" + tool.tool_name + "好 " + card.items[0]["name"] + "，可与其他食材组合。"
+		place_near(card, tool.position + Vector2(0, tool.size.y + 12))
+		update_info()
+		return
+	if card.items.size() < 2:
+		status_label.text = "先把至少两份食材叠放成组，再拖到烹饪工具。"
+		place_near(card, tool.position + Vector2(0, tool.size.y + 12))
+		return
+	card.kind = "dish"
+	card.cooking_method = tool.tool_name
+	card.tags = calculate_tags(card.items, tool.tool_name)
+	card.refresh()
+	place_near(card, Vector2(626, 400))
+	status_label.text = "完成：未知料理 · " + " / ".join(card.tags)
+	update_info()
+
+func calculate_tags(items, method):
+	var counts = {}
+	var result = []
+	var has_juiced = false
+	for item in items:
+		var ingredient_name = item["name"]
+		counts[ingredient_name] = counts.get(ingredient_name, 0) + 1
+		if item["process"] == "榨":
+			has_juiced = true
+	for ingredient_name in counts:
+		if counts[ingredient_name] >= 2:
+			result.append("超浓")
+			break
+	if has_juiced:
+		result.append("细腻")
+	result.append({"炸": "酥脆", "炒": "炒制", "煮": "温润"}[method])
+	return result
+
+func place_near(card, preferred):
+	# 在桌面网格里找离目标最近的空位，不让处理后的食材盖住工具。
+	var best_position = Vector2.ZERO
+	var best_distance = INF
+	for y in range(164, 570, 24):
+		for x in range(144, 1248, 24):
+			var candidate = Vector2(x, y)
+			var rect = Rect2(candidate, card.size)
+			if not TABLE_AREA.encloses(rect):
+				continue
+			var free = true
+			for other in cards:
+				if other != card and rect.grow(6).intersects(Rect2(other.position, other.size)):
+					free = false
+					break
+			if free and candidate.distance_squared_to(preferred) < best_distance:
+				best_distance = candidate.distance_squared_to(preferred)
+				best_position = candidate
+	if best_distance < INF:
+		card.position = best_position
+	else:
+		card.position = preferred
+		status_label.text += "（桌面拥挤，可拖开卡片或重置。）"
+	card.clamp_to_area()
+
+func on_card_clicked(card):
+	if selected_card == card:
+		selected_card = null
+		info_label.text = ""
+	else:
+		selected_card = card
+		update_info()
+
+func update_info():
+	if not is_instance_valid(selected_card):
+		return
+	var card = selected_card
+	if card.kind == "tool":
+		if card.tool_name in ["切", "榨"]:
+			info_label.text = card.tool_name + "：将单份食材的中心拖到此处松手，添加处理状态。再次处理会替换旧状态。工具只能在左区移动。"
+		else:
+			info_label.text = card.tool_name + "：接收至少两份食材组成的组，生成未知料理。同种两份→超浓；含榨过的食材→细腻；炸→酥脆，炒→炒制，煮→温润。"
+	elif card.kind == "dish":
+		info_label.text = "未知料理 · " + card.cooking_method + " · 使用 " + str(card.items.size()) + " 份食材\n标签：" + " / ".join(card.tags) + "。原型中成品只供查看与移动。"
+	else:
+		info_label.text = card.title_label.text.replace("\n", "；") + "\n拖到另一份食材上组合；单份可切或榨，成组后可煮、炸、炒。再次单击关闭说明。"

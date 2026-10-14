@@ -1,0 +1,59 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+Unrecognized output string "misc2" in mapping:
+030000000d0f00000202000000000000,Horipad O Nintendo Switch 2 Controller,a:b1,b:b0,back:b8,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b12,leftshoulder:b4,leftstick:b10,lefttrigger:b6,leftx:a0,lefty:a1,misc1:b13,misc2:b14,rightshoulder:b5,rightstick:b11,righttrigger:b7,rightx:a2,righty:a3,start:b9,x:b3,y:b2,platform:Windows,
+Unrecognized output string "misc2" in mapping:
+030000000d0f00009601000000000000,Horipad Steam,a:b0,b:b1,back:b10,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b12,leftshoulder:b6,leftstick:b13,lefttrigger:b8,leftx:a0,lefty:a1,misc2:b2,paddle1:b5,paddle2:b15,paddle3:b18,paddle4:b19,rightshoulder:b7,rightstick:b14,righttrigger:b9,rightx:a3,righty:a4,start:b11,x:b3,y:b4,platform:Windows,
+Unrecognized output string "misc2" in mapping:
+030000007e0500006920000000000000,Nintendo Switch 2 Pro Controller,a:b0,b:b1,back:b14,dpdown:b8,dpleft:b10,dpright:b9,dpup:b11,guide:b16,leftshoulder:b12,leftstick:b15,lefttrigger:b13,leftx:a0,lefty:a1~,misc1:b17,misc2:b20,paddle1:b18,paddle2:b19,rightshoulder:b4,rightstick:b7,righttrigger:b5,rightx:a2,righty:a3~,start:b6,x:b2,y:b3,platform:Windows,
+Native OpenGL API detected: 3.3: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+NVAPI: Init OK!
+NVAPI: Profile not found, creating...
+NVAPI: Application not found in profile, creating...
+NVAPI: Error saving settings: NVAPI_ACCESS_DENIED(code -175)
+SDL: Init OK!
+Using "winink" pen tablet driver...
+Shader 'CanvasSdfShaderGLES3' SHA256: 1fa5c3b407f8f2fd8b3490d414973d6c1f6e5ffe03b084b0ceefad6fa9cdcbbc
+Shader 'SkeletonShaderGLES3' SHA256: dde9ed2a6cc1f5d8b6a49fa9b8671b007813bd29f05ef6ee48933acf88c1c1f1
+Shader 'ParticlesShaderGLES3' SHA256: d952538226ac5378a6b990103c4e628b2b796600a7ee37bf41bf799faf39e8df
+Shader 'ParticlesCopyShaderGLES3' SHA256: ef252d5a0f69e2b137d8da912bdac1a788a1f7403163b316f86b2cd7b2ed45c4
+Shader 'CopyShaderGLES3' SHA256: 8932b693f53d073545333c6a9834ec586ebc234e6e4b8277109e1f1c701dabe6
+Shader 'CubemapFilterShaderGLES3' SHA256: 7bc45018aa9ecb4babfceb5c5cb88dae25552e0a76076621086533b34b99e40b
+Shader 'GlowShaderGLES3' SHA256: 7809ab34361f57744e1744bf9d8200cce5a9d831da53d01a827f81cdec7422e7
+Shader 'PostShaderGLES3' SHA256: 07da649272913edee18e54d6ddd6ee605f9091aec37cf67b287a4ee4bae4f24e
+Shader 'FeedShaderGLES3' SHA256: b2f5175c1218cc21cb8b72804b7defbc46af6660b81d8c1c2f88464f9a419d0d
+Shader 'CanvasShaderGLES3' SHA256: fe47f577e87f8b99fd77bb36d1781e50eb1d94d51b7ae9af1ebb20afd114ea69
+Shader 'CanvasOcclusionShaderGLES3' SHA256: 4d76012ab3434bf4b129fe75039b49c50c65012d9d2aa82ee8c27f1116c61bcb
+Shader 'SceneShaderGLES3' SHA256: 4a106bbe51851b0bc68fa63dfb7b06adea4be8b6b8e51a13f317d63888534e4f
+Shader 'SkyShaderGLES3' SHA256: 8d11d7fda62b110d7251a558efc6d81dc41615d66c418404424662acc2ae295b
+OpenGL API 3.3.0 NVIDIA 591.91 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+WASAPI: Activated output_device using IAudioClient3 interface
+WASAPI: wFormatTag = 65534
+WASAPI: nChannels = 2
+WASAPI: nSamplesPerSec = 48000
+WASAPI: nAvgBytesPerSec = 384000
+WASAPI: nBlockAlign = 8
+WASAPI: wBitsPerSample = 32
+WASAPI: cbSize = 22
+WASAPI: mix_rate = 48000
+WASAPI: fundamental_period_frames = 480
+WASAPI: min_period_frames = 480
+WASAPI: max_period_frames = 480
+WASAPI: selected a period frame size of 480
+WASAPI: detected 2 channels
+WASAPI: audio buffer frames: 480 calculated latency: 10ms
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+CORE API HASH: 75400357
+EDITOR API HASH: 3012763406
+Loading resource: res://test_music_start.gd
+SceneTreeFTI: traversal method DEFAULT
+Loading resource: res://music.gd
+Loaded system CA certificates
+Loading resource: res://audio/pixel_kitchen_loop.wav
+Loading resource: res://.godot/imported/pixel_kitchen_loop.wav-bc00394c3c6902750f3935eb7db8fc09.sample
+PASS: normal launch auto plays at saved volume; requesting graceful exit
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"

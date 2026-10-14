@@ -1,0 +1,83 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.91 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+
+PASS: eight tools and no deprecated kitchen controls
+PASS: removed old button 食材箱
+PASS: removed old button 出餐！
+PASS: removed old button 垃圾桶
+PASS: ingredient box opens window
+PASS: taking ingredient debits warehouse once
+PASS: window resize button changes size
+PASS: window cycles to small
+PASS: three clicks return original size
+PASS: title bar moves window
+PASS: window constrained to viewport
+PASS: window close button
+PASS: single click expands card in place
+PASS: second click collapses detail
+PASS: merge raw ingredients
+PASS: double click splits raw group
+PASS: double click does not leave an expanded detail
+PASS: mixed processed group cannot split
+PASS: trash consumes group without returning inventory
+PASS: tools cannot be trashed or leave work area
+PASS: tool explanation expands locally
+PASS: tool detail text fits inside card
+PASS: grinding transforms wheat to flour
+PASS: mixing flour milk egg makes batter intermediate
+PASS: baking batter makes named cake
+PASS: dish detail displays tag weights
+PASS: weighted dish description fits within card
+PASS: drop on outlet transfers cake exactly once
+PASS: outlet transfer keeps player in kitchen
+PASS: juiced strawberry plus milk becomes drink directly
+PASS: initial output tray capacity three
+PASS: full tray retains fourth dish without loss
+PASS: upgrade menu expands output tray and debits coins
+PASS: kitchen expansion available only in upgrade window
+PASS: upgraded tray accepts fourth dish
+PASS: dish dragged from tray to customer completes service
+PASS: recipe: 草莓蛋糕
+PASS: recipe: 苹果蛋糕
+PASS: recipe: 土豆蛋饼
+PASS: recipe: 奶香土豆泥
+PASS: recipe: 洋葱炒肉
+PASS: recipe: 辣椒炒肉
+PASS: recipe: 辣炒兔肉
+PASS: recipe: 酥炸鱼排
+PASS: recipe: 牛奶米糕
+PASS: recipe: 奶香面包
+PASS: recipe: 原味蛋糕
+PASS: recipe: 鸡蛋面疙瘩汤
+PASS: recipe: 草莓苹果奶昔
+PASS: recipe: 番茄蛋花汤
+PASS: recipe: 炸薯条
+PASS: recipe: 胡萝卜炖肉
+PASS: recipe: 香烤猪肉
+PASS: recipe: 田园兔肉汤
+PASS: recipe: 番茄鱼汤
+PASS: recipe: 香烤鱼
+PASS: recipe: 田园炒饭
+PASS: recipe: 草莓奶昔
+PASS: recipe: 苹果奶昔
+PASS: recipe: 番茄炒蛋
+PASS: recipe: 浓番茄炒蛋
+PASS: recipe: 烤土豆
+PASS: recipe: 清粥
+PASS: recipe: 奶香米粥
+PASS: recipe: 鸡蛋炒饭
+PASS: recipe: 苹果奶饮
+PASS: two tomatoes exact example weights
+PASS: three tomatoes exact example weights
+PASS: repeat same processing never farms tag weight
+PASS: processing history retained
+PASS: unlisted combinations named deterministically
+PASS: chef full table keeps ingredients intact
+PASS: chef consumes exact raw items and preserves leftovers
+PASS: empty inventory cannot create ingredients
+PASS: farm seed drag regression
+PASS: farm collection regression
+PASS: animal feeding growth and egg regression
+PASS: egg collection regression
+PASS: guidance uses draggable resizable windows
+COOKING CHECKS: 79 checks, 0 failures

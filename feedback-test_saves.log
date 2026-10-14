@@ -1,0 +1,48 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.91 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+
+PASS: title displays three empty slots without running a game
+PASS: title food card responds to click
+PASS: reduced motion stops floating cards
+PASS: slot click enters game and hides title
+PASS: new game writes initial morning checkpoint
+PASS: populated game can open restaurant
+PASS: closing day reaches settlement
+PASS: wages deducted once before autosave
+PASS: night checkpoint recorded
+PASS: money and warehouse saved
+PASS: repeated close cannot charge wages again
+PASS: return shows saved day on slot
+PASS: continue resumes settlement without replaying day
+PASS: loading never charges wages or changes day
+PASS: recipe listing and price restored
+PASS: catalog restored without discovery replay
+PASS: staff and known guest preferences restored
+PASS: expansions restored
+PASS: tray recipe reference restored
+PASS: raw group and table position restored
+PASS: processed intermediate restored
+PASS: tool position restored
+PASS: field progress and expansion restored
+PASS: seeds and uncollected crops restored
+PASS: animals and feed restored
+PASS: egg timer and uncollected product restored
+PASS: expanded homes restored silently
+PASS: night settlement freezes growth timers
+PASS: next day advances once and resets daily counters
+PASS: restored ingredient signals support double split
+PASS: restored dish can be served and priced
+PASS: second slot starts independently
+PASS: midday changes do not overwrite closing checkpoint
+PASS: save failure is visible at settlement
+PASS: failed save blocks next day until retry
+PASS: retry saves without charging wages twice
+PASS: corrupted primary recovers backup
+PASS: two corrupt files lock slot without overwriting
+PASS: cannot silently replace unreadable slot
+PASS: nested corrupt animal data rejected
+PASS: invalid recipe reference rejected before restoring
+PASS: unknown stock field rejected
+PASS: corruption in another slot cannot affect first slot
+PASS: third slot opens new shop despite broken second slot
+SAVE CHECKS: 44 checks, 0 failures

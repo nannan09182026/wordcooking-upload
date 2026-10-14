@@ -1,0 +1,17 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.91 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+
+PASS: default sound level is fifty percent
+PASS: button effect amplitude is three times at equal slider value
+PASS: background music gain remains unchanged
+PASS: first farm visit opens guide
+PASS: guide is centered
+PASS: click inside guide dismisses it
+PASS: active farm navigation remains clickable to reopen guide
+PASS: dismissing click never activates underlying navigation
+PASS: first barn visit opens its own guide
+PASS: blank click dismisses guide
+PASS: later navigation does not repeatedly interrupt with guide
+PASS: repeat page entry explicitly reopens guide
+PASS: changing page clears old guide
+SOUND HELP CHECKS: 13 checks, 0 failures

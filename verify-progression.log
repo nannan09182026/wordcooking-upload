@@ -1,0 +1,71 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.91 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+
+PASS: 26 foods and 46 official recipes
+PASS: premium stock is not given free
+PASS: warehouse shows all stock without duplicates
+PASS: in-stock filter excludes unavailable premium stock
+PASS: taste filter uses ingredient tags
+PASS: stock card expands detail
+PASS: stock card closes detail
+PASS: usage filter includes new drink ingredients
+PASS: drink usage excludes wheat and eggs
+PASS: sweet filter includes sweet and sour fruit
+PASS: small warehouse uses one column
+PASS: warehouse columns stay inside small window
+PASS: warehouse avoids redundant outer scrolling
+PASS: small shop category tabs do not overlap content
+PASS: shop restores content scrolling after warehouse
+PASS: locked store does not expose purchasable goods
+PASS: legacy purchase path also respects store lock
+PASS: day and money alone cannot unlock
+PASS: eight different official recipes qualify for middle store
+PASS: early day still blocks unlock
+PASS: middle unlock charges once
+PASS: repeat unlock cannot charge again
+PASS: middle store has exactly six goods
+PASS: new ingredient purchase updates stock and money
+PASS: advanced store requires further progression
+PASS: insufficient unlock fee is rejected
+PASS: advanced store unlocks six ingredients for 480
+PASS: full recipe chain: 洋葱炒牛肉
+PASS: recipe rarity: 洋葱炒牛肉
+PASS: full recipe chain: 蘑菇牛肉汤
+PASS: recipe rarity: 蘑菇牛肉汤
+PASS: full recipe chain: 番茄虾仁汤
+PASS: recipe rarity: 番茄虾仁汤
+PASS: full recipe chain: 奶酪焗土豆
+PASS: recipe rarity: 奶酪焗土豆
+PASS: full recipe chain: 奶香蘑菇汤
+PASS: recipe rarity: 奶香蘑菇汤
+PASS: full recipe chain: 蜂蜜奶饮
+PASS: recipe rarity: 蜂蜜奶饮
+PASS: full recipe chain: 可可奶饮
+PASS: recipe rarity: 可可奶饮
+PASS: full recipe chain: 蜂蜜可可蛋糕
+PASS: recipe rarity: 蜂蜜可可蛋糕
+PASS: full recipe chain: 龙虾奶香浓汤
+PASS: recipe rarity: 龙虾奶香浓汤
+PASS: full recipe chain: 扇贝蘑菇浓汤
+PASS: recipe rarity: 扇贝蘑菇浓汤
+PASS: full recipe chain: 藏红花海鲜饭
+PASS: recipe rarity: 藏红花海鲜饭
+PASS: full recipe chain: 松露奶酪烤土豆
+PASS: recipe rarity: 松露奶酪烤土豆
+PASS: full recipe chain: 香草牛奶
+PASS: recipe rarity: 香草牛奶
+PASS: full recipe chain: 蓝莓蜂蜜奶昔
+PASS: recipe rarity: 蓝莓蜂蜜奶昔
+PASS: full recipe chain: 松露龙虾焗盘
+PASS: recipe rarity: 松露龙虾焗盘
+PASS: full recipe chain: 星光蓝莓庆典蛋糕
+PASS: recipe rarity: 星光蓝莓庆典蛋糕
+PASS: only two discovered legendary recipes get rainbow ribbon
+PASS: free creation cannot become legendary
+PASS: v2 progression save writes successfully
+PASS: store unlock and premium inventory survive disk roundtrip
+PASS: v1 save gains empty premium stock and locked stores
+PASS: reading old save never rewrites source file
+PASS: migration does not disguise missing original stock
+PASS: saved progression restores a fresh game
+PROGRESSION CHECKS: 67 checks, 0 failures

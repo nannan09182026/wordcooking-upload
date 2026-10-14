@@ -1,0 +1,81 @@
+Godot Engine v4.6.1.stable.official.14d19694e - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 591.91 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Laptop GPU
+
+PASS: six stage voices and one growth sound loaded
+PASS: animal sound decodes
+PASS: animal sound decodes
+PASS: animal sound decodes
+PASS: animal sound decodes
+PASS: animal sound decodes
+PASS: animal sound decodes
+PASS: animal sound decodes
+PASS: empty pen has no voice: 鸡
+PASS: entry plays baby voice once: 鸡
+PASS: entry voice triggers own card animation: 鸡
+PASS: call visibly sways card: 鸡
+PASS: same pen does not retrigger entry: 鸡
+PASS: switch page stops voice and sway: 鸡
+PASS: offscreen growth is silent: 鸡
+PASS: return gives adult greeting not delayed growth: 鸡
+PASS: first meal does not play adult cue: 鸡
+PASS: visible adulthood cues once: 鸡
+PASS: adult meals never repeat growth cue: 鸡
+PASS: idle actually walks across pen: 鸡
+PASS: resting animal no longer bounces: 鸡
+PASS: random walking target is meaningful: 鸡
+PASS: drag release clamps animal inside pen: 鸡
+PASS: user dragging overrides wandering: 鸡
+PASS: detail inspection holds animal still: 鸡
+PASS: return to home stops animal sound: 鸡
+PASS: empty pen has no voice: 兔
+PASS: entry plays baby voice once: 兔
+PASS: entry voice triggers own card animation: 兔
+PASS: call visibly sways card: 兔
+PASS: same pen does not retrigger entry: 兔
+PASS: switch page stops voice and sway: 兔
+PASS: offscreen growth is silent: 兔
+PASS: return gives adult greeting not delayed growth: 兔
+PASS: first meal does not play adult cue: 兔
+PASS: visible adulthood cues once: 兔
+PASS: adult meals never repeat growth cue: 兔
+PASS: idle actually walks across pen: 兔
+PASS: resting animal no longer bounces: 兔
+PASS: random walking target is meaningful: 兔
+PASS: drag release clamps animal inside pen: 兔
+PASS: user dragging overrides wandering: 兔
+PASS: detail inspection holds animal still: 兔
+PASS: return to home stops animal sound: 兔
+PASS: empty pen has no voice: 猪
+PASS: entry plays baby voice once: 猪
+PASS: entry voice triggers own card animation: 猪
+PASS: call visibly sways card: 猪
+PASS: same pen does not retrigger entry: 猪
+PASS: switch page stops voice and sway: 猪
+PASS: offscreen growth is silent: 猪
+PASS: return gives adult greeting not delayed growth: 猪
+PASS: first meal does not play adult cue: 猪
+PASS: visible adulthood cues once: 猪
+PASS: adult meals never repeat growth cue: 猪
+PASS: idle actually walks across pen: 猪
+PASS: resting animal no longer bounces: 猪
+PASS: random walking target is meaningful: 猪
+PASS: drag release clamps animal inside pen: 猪
+PASS: user dragging overrides wandering: 猪
+PASS: detail inspection holds animal still: 猪
+PASS: return to home stops animal sound: 猪
+PASS: other pen cannot trigger growth sound
+PASS: mute immediately stops and blocks animal voice
+PASS: zero volume blocks voice and gesture
+PASS: reduced motion keeps voice without sway
+PASS: idle chorus limited to one voice with cooldown
+PASS: hidden idle never schedules audible calls
+PASS: visible idle animal calls at its interval
+PASS: hungry animal prioritizes and reaches edge feed
+PASS: wandering bounds retained
+PASS: wandering bounds retained
+PASS: wandering bounds retained
+PASS: wandering bounds retained
+PASS: wandering bounds retained
+PASS: wandering bounds retained
+PASS: wandering bounds retained
+ANIMAL CHECKS: 77 checks, 0 failures
